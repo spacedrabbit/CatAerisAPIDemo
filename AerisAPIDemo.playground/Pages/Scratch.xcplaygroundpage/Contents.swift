@@ -29,6 +29,7 @@ internal func basicAerisRequest() {
 //  guard let aerisEndpoint: NSURL = NSURL(string: "http://dl.dropboxusercontent.com/s/bh0tij9u2tok14h/InstaCats.json?dl=0") else {
 //    return
 //  }
+  
   guard let aerisEndpoint: NSURL = NSURL(string: "https://api.myjson.com/bins/254uw") else {
     return
   }
@@ -61,8 +62,8 @@ internal func basicAerisRequest() {
 // Dropbox how to host Json: http://stackoverflow.com/questions/18520456/ios-hosting-json-file-to-parse-it-using-url
 // JSONlinter: http://jsonlint.com/
 // NOTE - This kind of request requires that the .needsIndefiniteExecution be true. But be aware that once set, every change to the playground will result in another re-running of the code and thus another hit to the API usage limit
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-basicAerisRequest()
+//XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+//basicAerisRequest()
 
 
 
