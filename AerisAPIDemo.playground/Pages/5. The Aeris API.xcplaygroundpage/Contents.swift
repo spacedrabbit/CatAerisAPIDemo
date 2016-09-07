@@ -1,16 +1,16 @@
-  //: ----------------------------------------------------
-  //: ## The Aeris API
-  //: ----------------------------------------------------
-  /*:
+//: ----------------------------------------------------
+//: ## The Aeris API
+//: ----------------------------------------------------
+/*:
    
-   #### Aeris
-   Now, one example of a weather API is the Aeris API. I will caution that this API has a lot of options to make requests, and many bits of information in its responses. So, one good trick to have in mind when trying out a new API is to have a specific goal in mind and to work towards it.
-   
-   */
+#### Aeris
+Now, one example of a weather API is the Aeris API. I will caution that this API has a lot of options to make requests, and many bits of information in its responses. So, one good trick to have in mind when trying out a new API is to have a specific goal in mind and to work towards it.
+
+The primary way I use weather apps is during the morning when I'm looking for an overview of the day's weather. So let's try to simulate that experience by generating a request that will return today's weather for our current location.
+*/
   
   import UIKit
   import XCPlayground
-  
   
   internal struct AerisURL {
     internal static let BaseURL: String = "https://api.aerisapi.com"
@@ -58,6 +58,6 @@
   }
   
   
-  // NOTE - This kind of request requires that the .needsIndefiniteExecution be true. But be aware that once set, every change to the playground will result in another re-running of the code and thus another hit to the API usage limit
+// NOTE - This kind of request requires that the .needsIndefiniteExecution be true. But be aware that once set, every change to the playground will result in another re-running of the code and thus another hit to the API usage limit
 //  XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 //  basicAerisRequest()
