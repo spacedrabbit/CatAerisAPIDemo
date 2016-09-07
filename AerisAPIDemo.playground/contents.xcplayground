@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
+        <page name='1. NSURL and Json Parsing'/>
+        <page name='2. NSURLSession and JsonParsing'/>
+        <page name='3. APIs'/>
+        <page name='4. The Aeris API'/>
         <page name='Scratch'/>
-        <page name='NSURLSession and JsonParsing'/>
-        <page name='NSURL and Json Parsing'/>
     </pages>
 </playground>

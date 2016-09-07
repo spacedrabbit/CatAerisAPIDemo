@@ -39,5 +39,5 @@ func makeInstaCatRequest() {
 }
 
 // 1. setup
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-makeInstaCatRequest()
+//XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+//makeInstaCatRequest()
