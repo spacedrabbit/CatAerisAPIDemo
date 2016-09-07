@@ -2,6 +2,15 @@
 //: ## APIs
 //: ----------------------------------------------------
 /*:
+ - callout(LESSON OBJECTIVES):
+    - Introduce the concept of web based APIs
+    - Give examples of popular webservices as being APIs to reinforce their ubiquity
+    - Frame using APIs as being able to develop amazing apps that would not be possible on your own or without large development teams
+    - (Interactive example) Explain JSON a bit and show how to view some simple JSON using the Maps Geocode API
+    - Bring in API documentation as what defines which requests are possible, and what their responses will be
+    - (Interactive example) Introduce Postman as a utility for quickly testing APIs
+      - Search Geocode API in Postman
+ 
  ### Intro (Instructor)
  - callout(Instructor:): Begin by posing the question: **How many weather apps do you think there are in the app store?**
  
@@ -17,10 +26,22 @@
  1. Any library used to do a specific function in an app (for example CoreData could be considered a native iOS API for data storage... note sub any example here that the students will know)
  2. A REST API that is used to communicate with some service on the web, (like a weather API!)
  
+ ----
+ #### Why do APIs matter
+ Firstly, they allow you to develop software faster! The existance of APIs let you perform a variety of tasks that just take way too long to write out yourself. Can you imagine having to write out your own custom `print()` function for every app you create?
+ 
+ In the context of web-based REST APIs, they are how your app is going to talk to the world! There are hundreds of services out there that you might want to develop an app around
+    - A messaging app might use Firebase for realtime communication
+    - A social media app that aggregates your top tweets will make use of the Twitter API (Fabric)
+    - A cloud-based, file storage app may decide to use the Dropbox API for storing, retrieving and editing files
+    - Perhaps you have a new take on location-based B2B services, and will make use of the Foursquare API to load local business data
+    - Have a way to track pokemon in PokemonGo? Seems like a good place to use the Google Maps API to display live GPS data
+ 
+ Practically, apps can use multiple REST API's to perform complex tasks and create novel experiences for their users. With enough practice and skill, you can even develop your own APIs that other developers will use
  
  ----
  #### JSON (explained)
- Since there is a wide possibility of devices that use API's, there needs to be a standard for how they can all communicate effectively. The most common format in use is JSON (Javascript Object Notation). JSON defines how the data returned from an API will be formatted, and it is at its core just a dictionary. How exactly that dictionary's key/value pairs are returned is up to the API. This is what we mean when we say that an API defines it's data response. 
+ Since there is a wide possibility of devices that use API's and many differnt APIs providing unique services, there needs to be a standard for how it can all communicate effectively. The most common format in use is JSON (Javascript Object Notation). JSON defines how the data returned from an API will be formatted, and at its core is just a dictionary. You may even often hear json referred to as a "json dictionary." Though, how exactly that json dictionary's key/value pairs are returned is up to the API. This is what we mean when we say that an API defines it's data response.
  
 - callout(Instructor:): Go into Chrome and plug in the (URL)[http://maps.googleapis.com/maps/api/geocode/json]
 
@@ -47,26 +68,28 @@ Not an exciting result, but there's way more here than you might initially expec
  ----
  
  #### Trying out the API
- So looking at this particular request, we see we're getting back an error. And judging by the APIs documentation, this is expected. Fortunately in the event of a bad request to an API, it is possible that the API returns a response with helpful error messages regarding what was bad about the request. In this case, we made an "invalid request" because we didn't include some additional information it was expecting to get along with the request. This additional information passed along with a request is called **parameters**.
+ So looking at this particular request, we see we're getting back an error. And judging by the APIs documentation, this is expected. Fortunately in the event of a bad request to an API, it is possible that the API returns a response with helpful error messages regarding what was bad about the request. In this case, we made an "invalid request" because we didn't include some additional information it was expecting to get along with the request. This additional information passed along with a request is called **parameters**. Parameters specify additional constraints on the requests we make. They may limit the data requested by filtering it by some criteria
  
- >> Info on parameters
- >> Example: show demo on adding the "address" key along with a "value" of the address of C4Q
- >> Review the results briefly and show how the results differ from the previous bad request
- >> Explain that all of these results are listed in the API's documentation for this kind of response, so we will always know what to expect. 
+- callout(Instructor:):
+    1. Example: Continue google maps geocode API on adding the "address" key along with a "value" of the address of C4Q
+        - something like: http://maps.googleapis.com/maps/api/geocode/json?address=%2243-06%2045th%20Street%22
+        - Worth mentioning that parameters appear following a ? and spaces are replaced by %20 for the actual request, but the google api will understand the request the exact same way as if you put in "43-06 45th Street"
+    2. Review the results briefly and show how the results differ from the previous bad request
+        - Highlight the new data passed along with a valid request. 
+        - (optional) bring up the API documentation page again and compare the keys with what the API states will be returned
+        - Explain that all of these results are listed in the API's documentation for this kind of response, so we will always know what to expect.
 
- >> Plugging away in a webbrowser is a lightweight way to test out an API, but we can get some real power by using some utilities specifically meant for making API requests
+ Plugging away in a webbrowser is a lightweight way to test out an API, but we can get some real power by using some utilities specifically meant for making API requests...
 
+ 
  -----
- 
  #### [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
  
  Link for [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
  
- - callout(Instructor:): Open Postman and enter the previous googleapis request http://maps.googleapis.com/maps/api/geocode/json along with an `address` parameter and value to illustrate what can be done. (or include a saved library for quick completion)
+ - callout(Instructor:): 
+    1. Open Postman and enter the previous googleapis request http://maps.googleapis.com/maps/api/geocode/json along with an `address` parameter and value to illustrate what can be done. (or include a saved Postman request library for quick completion)
+      - (optional) have class try out some of the other available parameters, such as "zipcode"
  */
 
-import Foundation
-
-var str = "Hello, playground"
-
-//: [Next](@next)
+//: ----

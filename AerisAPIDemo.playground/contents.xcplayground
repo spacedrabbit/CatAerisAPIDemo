@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
         <page name='1. NSURL and Json Parsing'/>
         <page name='2. NSURLSession and JsonParsing'/>
         <page name='3. APIs'/>
-        <page name='4. The Aeris API'/>
+        <page name='4. Simple APIs'/>
+        <page name='5. The Aeris API'/>
+        <page name='6. Concurrency in Concept'/>
+        <page name='7. Asynchronous Requests'/>
         <page name='Scratch'/>
     </pages>
 </playground>
