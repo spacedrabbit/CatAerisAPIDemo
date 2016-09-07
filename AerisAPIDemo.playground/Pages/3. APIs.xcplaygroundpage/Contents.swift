@@ -22,7 +22,7 @@
  #### JSON (explained)
  Since there is a wide possibility of devices that use API's, there needs to be a standard for how they can all communicate effectively. The most common format in use is JSON (Javascript Object Notation). JSON defines how the data returned from an API will be formatted, and it is at its core just a dictionary. How exactly that dictionary's key/value pairs are returned is up to the API. This is what we mean when we say that an API defines it's data response. 
  
-- callout(Instructor:): Go into Chrome and plug in the URL http://maps.googleapis.com/maps/api/geocode/json
+- callout(Instructor:): Go into Chrome and plug in the (URL)[http://maps.googleapis.com/maps/api/geocode/json]
 
 To get a sense of what JSON looks like, and how its used, let's go ahead and navigate to: http://maps.googleapis.com/maps/api/geocode/json
  
@@ -40,7 +40,7 @@ Not an exciting result, but there's way more here than you might initially expec
  ![](error_message.png)
  ![](status_codes.png)
  
- - callout(Instructor:): Switch out to Chrome and plug in the URL: https://developers.google.com/places/web-service/search and scroll down the "Search" section
+ - callout(Instructor:): Switch out to Chrome and plug in the (URL)[https://developers.google.com/places/web-service/search] and scroll down the "Search" section
  
  The above is just an example to give background to the JSON response we got earlier. If we check out https://developers.google.com/places/web-service/search we'll be able to see every possible request and response that can be made by the API.
  
@@ -58,9 +58,11 @@ Not an exciting result, but there's way more here than you might initially expec
 
  -----
  
- #### Postman (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+ #### [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
  
- - callout(Instructor:):
+ Link for [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+ 
+ - callout(Instructor:): Open Postman and enter the previous googleapis request http://maps.googleapis.com/maps/api/geocode/json along with an `address` parameter and value to illustrate what can be done. (or include a saved library for quick completion)
  */
 
 import Foundation
