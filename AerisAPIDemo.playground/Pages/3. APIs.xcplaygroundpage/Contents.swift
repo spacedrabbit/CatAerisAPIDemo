@@ -13,7 +13,7 @@
  
  ### Intro (Instructor)
  - callout(Instructor:): Begin by posing the question: **How many weather apps do you think there are in the app store?**
- 
+ 
  I’d wager there must be in the thousands, at least. Some of those apps have entire teams dedicated to building the app, while some of them are a single person; a person who might have just done it as a weekend project. And despite the great variety of apps made, all of their data is relatively consistent.
  
  But where are those developer teams, large and small, getting their weather data? I mean here you have 1000’s of different apps and they all have the same data set. How are they able to all present the same information?

@@ -10,7 +10,7 @@ let instaCats: NSURL = NSURL(fileReferenceLiteral: "InstaCats.json")
 
 
 //: ----
-// Step 1 - Getting raw data
+// Step 1 - Getting raw data 
 /*:
  - callout(Instructor:): Intro concept of importing "json" from local file
  */
