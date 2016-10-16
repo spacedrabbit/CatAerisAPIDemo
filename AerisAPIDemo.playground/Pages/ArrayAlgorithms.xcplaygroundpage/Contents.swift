@@ -40,27 +40,23 @@ enum ZigPattern {
   }
 }
 
-let input: [Int] = [1, 2, 3, 4, 5, 6, 7]
+let input: [Int] = [7, 6, 5, 4, 3, 2, 1]
 
+// runs in O(n)
 func zigzagPattern(input: [Int], index: Int, pattern: ZigPattern) -> [Int] {
-  
-  print("input count: \(input.count)")
-  guard input.count >= 2 else {
+
+  // return if the input is a single element
+  guard input.count > 2 else {
     return input
   }
-  
-  let indexMax = input.index(input.startIndex.advanced(by: index), offsetBy: 1, limitedBy: input.count - 1)
-  print(indexMax)
-  guard let validIndex = indexMax else {
+
+  // return array as is if the index represents the last element in the array
+  guard let validMaxIndex = input.index(input.startIndex.advanced(by: index), offsetBy: 1, limitedBy: input.count - 1) else {
     return input
   }
   
   let firstElement = input[index]
-  let secondElement = input[validIndex]
-  
-  print("indexMax: \(validIndex)")
-  print("first element: \(firstElement)")
-  print("second element: \(secondElement)")
+  let secondElement = input[validMaxIndex]
   
   let sortedItems = [firstElement, secondElement].sorted(by: pattern.returnPattern())
 
@@ -75,5 +71,5 @@ func zigzagPattern(input: [Int], index: Int, pattern: ZigPattern) -> [Int] {
   return zigzagPattern(input: updatedInput, index: index + 1, pattern: pattern.returnOppositePattern())
 }
 
-let ziggedArray = zigzagPattern(input: input, index: 0, pattern: .greaterThan)
+let ziggedArray = zigzagPattern(input: input, index: 0, pattern: .lessThan)
 print(ziggedArray)
